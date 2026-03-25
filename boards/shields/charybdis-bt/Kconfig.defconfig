@@ -1,6 +1,6 @@
 # Copyright (c) 2022 ZMK Contributors
 # SPDX-License-Identifier: MIT
- 
+
 if SHIELD_CHARYBDIS_RIGHT
 
 config ZMK_KEYBOARD_NAME
@@ -8,6 +8,65 @@ config ZMK_KEYBOARD_NAME
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
+
+config PMW3610
+	bool "PMW3610 Trackball Driver"
+	default y
+
+config PMW3610_SMART_ALGORITHM
+	bool "PMW3610 Smart Algorithm"
+	depends on PMW3610
+	default y
+
+config PMW3610_SWAP_XY
+	bool "PMW3610 Swap X/Y"
+	depends on PMW3610
+	default y
+
+config PMW3610_INVERT_X
+	bool "PMW3610 Invert X"
+	depends on PMW3610
+	default y
+
+config PMW3610_INVERT_Y
+	bool "PMW3610 Invert Y"
+	depends on PMW3610
+	default y
+
+config PMW3610_REPORT_INTERVAL_MIN
+	int "PMW3610 Report Interval Min"
+	depends on PMW3610
+	default 12
+
+config PMW3610_REST1_SAMPLE_TIME_MS
+	int "PMW3610 Rest1 Sample Time (ms)"
+	depends on PMW3610
+	default 100
+
+config PMW3610_REST2_SAMPLE_TIME_MS
+	int "PMW3610 Rest2 Sample Time (ms)"
+	depends on PMW3610
+	default 200
+
+config PMW3610_REST3_SAMPLE_TIME_MS
+	int "PMW3610 Rest3 Sample Time (ms)"
+	depends on PMW3610
+	default 300
+
+config PMW3610_RUN_DOWNSHIFT_TIME_MS
+	int "PMW3610 Run Downshift Time (ms)"
+	depends on PMW3610
+	default 2000
+
+config PMW3610_REST1_DOWNSHIFT_TIME_MS
+	int "PMW3610 Rest1 Downshift Time (ms)"
+	depends on PMW3610
+	default 3000
+
+config PMW3610_REST2_DOWNSHIFT_TIME_MS
+	int "PMW3610 Rest2 Downshift Time (ms)"
+	depends on PMW3610
+	default 30000
 
 endif
 

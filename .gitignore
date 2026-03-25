@@ -1,21 +1,2 @@
-# Build outputs
-firmware/
-build/
-build-simple.sh
-
-# ZMK workspace
-zmk/
-modules/
-zephyr/
-bootloader/
-tools/
-.west/
-
-# Generated files
 boards/shields/charybdis/charybdis.keymap
 drivers/
-*.uf2
-
-# IDE
-.vscode/
-.idea/
