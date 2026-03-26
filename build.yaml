@@ -20,12 +20,12 @@
 include:
   # QWERTY BT
   - board: nice_nano_v2
-    shield: charybdis_left
+    shield: charybdis-bt_left
     keymap: qwerty
     format: bt
     artifact-name: charybdis_qwerty_left
   - board: nice_nano_v2
-    shield: charybdis_right
+    shield: charybdis-bt_right
     keymap: qwerty
     format: bt
     artifact-name: charybdis_qwerty_right
@@ -33,12 +33,12 @@ include:
 
   # # Colemak DH BT
   # - board: nice_nano_v2
-  #   shield: charybdis_left
+  #   shield: charybdis-bt_left
   #   keymap: colemak_dh
   #   format: bt
   #   artifact-name: charybdis_colemak_left
   # - board: nice_nano_v2
-  #   shield: charybdis_right
+  #   shield: charybdis-bt_right
   #   keymap: colemak_dh
   #   format: bt
   #   artifact-name: charybdis_colemak_right
@@ -46,12 +46,12 @@ include:
 
   # # QWERTY Dongle
   # - board: nice_nano_v2
-  #   shield: charybdis_left
+  #   shield: charybdis-dongle_left
   #   keymap: qwerty
   #   format: dongle
   #   artifact-name: charybdis_qwerty_dongle_left
   # - board: nice_nano_v2
-  #   shield: charybdis_right
+  #   shield: charybdis-dongle_right
   #   keymap: qwerty
   #   format: dongle
   #   artifact-name: charybdis_qwerty_dongle_right
@@ -63,12 +63,12 @@ include:
 
   # # Colemak DH Dongle
   # - board: nice_nano_v2
-  #   shield: charybdis_left
+  #   shield: charybdis-dongle_left
   #   keymap: colemak_dh
   #   format: dongle
   #   artifact-name: charybdis_colemak_dongle_left
   # - board: nice_nano_v2
-  #   shield: charybdis_right
+  #   shield: charybdis-dongle_right
   #   keymap: colemak_dh
   #   format: dongle
   #   artifact-name: charybdis_colemak_dongle_right
