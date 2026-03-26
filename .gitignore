@@ -1,2 +1,32 @@
+# ZMK / West build system
+.west/
+build/
+modules/
+zephyr/
+zmk/
+
+# Generated shield directories (created during build)
+boards/shields/charybdis-dongle/
 boards/shields/charybdis/charybdis.keymap
+
+# Generated keymap files
+config/colemak_dh.keymap
+
+# Build artifacts
+firmware/*.uf2
+firmware/*.hex
+firmware/*.bin
+
+# Drivers directory
 drivers/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
