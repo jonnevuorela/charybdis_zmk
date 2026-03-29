@@ -48,7 +48,7 @@ layers:
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD COMMA AND LESS THAN))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD PERIOD AND GREATER THAN))
   - {t: /, h: SCROLL}
-  - RSHIFT
+  - '='
   - LEFT META
   - LINUX-NAV
   - SPACE
@@ -115,45 +115,45 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   LINUX-NAV:
+  - {t: ESC, type: trans}
+  - {t: F1, type: trans}
+  - {t: F2, type: trans}
+  - {t: F3, type: trans}
+  - {t: F4, type: trans}
+  - {t: F5, type: trans}
+  - {t: F6, type: trans}
+  - {t: F7, type: trans}
+  - {t: F8, type: trans}
+  - {t: F9, type: trans}
+  - {t: F10, type: trans}
+  - {t: F11, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '1', h: toggle}
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ESCAPE
-  - {t: F1, h: toggle}
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - {t: ▽, type: trans}
-  - HOME
-  - PAGE UP
   - PREVIOUS
   - PLAY PAUSE
   - NEXT
-  - {t: ▽, type: trans}
-  - LEFT
+  - {t: LEFT, type: trans}
   - DOWN ARROW
   - UP ARROW
   - RIGHT
-  - DEV TOOLS
   - {t: ▽, type: trans}
-  - END
-  - PAGE DOWN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
