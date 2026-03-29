@@ -144,10 +144,10 @@
         linux_raise_layer {
             label = "LINUX-NUM";
             bindings = <
-&trans            &trans                &trans                    &trans                    &trans                          &trans           &trans     &trans         &trans        &trans             &trans                 &trans
-&kp DE_LESS_THAN  &kp EXCLAMATION       &kp AT                    &kp HASH                  &kp DLLR                        &kp PERCENT      &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LPAR           &kp RIGHT_PARENTHESIS  &kp TILDE
-&kp GRAVE         &hml LEFT_CONTROL N1  &hml LEFT_ALT DE_SECTION  &hml LEFT_GUI DE_EQUAL    &hml LEFT_SHIFT LS(DE_SECTION)  &kp LA(N)        &kp MINUS  &kp EQUAL      &kp LBKT      &kp RIGHT_BRACKET  &kp BACKSLASH          &kp LESS_THAN
-&kp DE_CARET      &trans                &kp DE_AT                 &hml LA(DE_N8) LA(DE_N5)  &hml LA(DE_N9) LA(DE_N6)        &kp DE_UMLAUT    &kp UNDER  &kp PLUS       &kp LBRC      &kp RBRC           &kp PIPE               &kp TILDE
+&trans            &trans                &trans                    &trans                    &trans                          &trans           &trans     &trans         &trans               &trans                &trans                 &trans
+&kp DE_LESS_THAN  &kp EXCLAMATION       &kp AT                    &kp HASH                  &kp DLLR                        &kp PERCENT      &kp CARET  &kp AMPERSAND  &kp ASTERISK         &kp LPAR              &kp RIGHT_PARENTHESIS  &kp TILDE
+&kp GRAVE         &hml LEFT_CONTROL N1  &hml LEFT_ALT DE_SECTION  &hml LEFT_GUI DE_EQUAL    &hml LEFT_SHIFT LS(DE_SECTION)  &kp LA(N)        &kp MINUS  &kp EQUAL      &kp DE_LEFT_BRACKET  &kp DE_RIGHT_BRACKET  &kp BACKSLASH          &kp LESS_THAN
+&kp DE_CARET      &trans                &kp DE_AT                 &hml LA(DE_N8) LA(DE_N5)  &hml LA(DE_N9) LA(DE_N6)        &kp DE_UMLAUT    &kp UNDER  &kp PLUS       &kp DE_LEFT_BRACE    &kp DE_RIGHT_BRACE    &kp PIPE               &kp TILDE
                                                                   &trans                    &kp BACKSPACE                   &trans           &trans     &kp DE_N0
                                                                                             &trans                          &trans           &trans
             >;
