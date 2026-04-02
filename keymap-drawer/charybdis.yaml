@@ -48,7 +48,7 @@ layers:
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD COMMA AND LESS THAN))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD PERIOD AND GREATER THAN))
   - {t: /, h: SCROLL}
-  - '='
+  - BACK SPACE
   - LEFT META
   - LINUX-NAV
   - SPACE
@@ -56,7 +56,7 @@ layers:
   - LINUX-NUM
   - '&mkp MB1'
   - '&mkp MB2'
-  - BACK SPACE
+  - RIGHT ALT
   LINUX-NUM:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -78,9 +78,9 @@ layers:
   - '%'
   - ^
   - '&'
-  - '*'
-  - (
-  - )
+  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK)))
+  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS)))
+  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 3 AND HASH)))
   - '~'
   - '`'
   - {t: '1', h: LEFT CONTROL}
@@ -90,8 +90,8 @@ layers:
   - Alt+ N
   - '-'
   - '='
-  - '['
-  - ']'
+  - AGr+ 8
+  - AGr+ 9
   - \
   - <
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD EQUAL AND PLUS))
@@ -102,11 +102,11 @@ layers:
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD RIGHT BRACKET AND RIGHT BRACE))
   - _
   - +
-  - '{'
-  - '}'
+  - Sft+AGr+ 8
+  - AGr+Sft+ 9
   - '|'
   - '~'
-  - {t: ▽, type: trans}
+  - {t: LALT, type: trans}
   - BACK SPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
