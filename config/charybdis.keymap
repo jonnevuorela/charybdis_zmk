@@ -149,7 +149,7 @@
 &kp GRAVE         &hml LEFT_CONTROL N1  &hml LEFT_ALT DE_SECTION  &hml LEFT_GUI DE_EQUAL    &hml LEFT_SHIFT LS(DE_SECTION)  &kp LA(N)               &kp MINUS             &kp EQUAL             &kp RA(N8)               &kp RA(N9)                &kp BACKSLASH         &kp LESS_THAN
 &kp LEFT_SHIFT    &trans                &trans                    &hml LA(DE_N8) LA(DE_N5)  &hml LA(DE_N9) LA(DE_N6)        &kp DE_UMLAUT           &kp UNDER             &kp PLUS              &kp RS(RA(NUMBER_8))     &kp RA(RS(N9))            &kp PIPE              &kp RIGHT_ALT
                                                                   &kp LALT                  &kp BACKSPACE                   &trans                  &trans                &kp DE_N0
-                                                                                            &trans                          &trans                  &kp RIGHT_ALT
+                                                                                            &trans                          &trans                  &kp LEFT_ALT
             >;
         };
 
