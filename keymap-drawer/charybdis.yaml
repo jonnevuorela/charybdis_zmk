@@ -50,25 +50,25 @@ layers:
   - {t: /, h: SCROLL}
   - BACK SPACE
   - LEFT META
-  - LINUX-NAV
+  - GAME
   - SPACE
   - RETURN
-  - LINUX-NUM
+  - LINUX-NAV
   - '&mkp MB1'
   - '&mkp MB2'
   - RIGHT ALT
   LINUX-NUM:
   - {t: ▽, type: trans}
-  - {t: Sft+Alt+ 1, type: trans}
-  - {t: Sft+Alt+ 2, type: trans}
-  - {t: Sft+Alt+ 3, type: trans}
-  - {t: Sft+Alt+ 4, type: trans}
-  - {t: Sft+Alt+ 5, type: trans}
-  - {t: Sft+Alt+ 6, type: trans}
-  - {t: Sft+Alt+ 7, type: trans}
-  - {t: Alt+Sft+ 8, type: trans}
-  - {t: Sft+Alt+ 9, type: trans}
-  - {t: Sft+Alt+ 0, type: trans}
+  - {t: Sft+AGr+ 1, type: trans}
+  - {t: Sft+AGr+ 2, type: trans}
+  - {t: Sft+AGr+ 3, type: trans}
+  - {t: Sft+AGr+ 4, type: trans}
+  - {t: Sft+AGr+ 5, type: trans}
+  - {t: Sft+AGr+ 6, type: trans}
+  - {t: Sft+AGr+ 7, type: trans}
+  - {t: Sft+AGr+ 8, type: trans}
+  - {t: Sft+AGr+ 9, type: trans}
+  - {t: Sft+AGr+ 0, type: trans}
   - {t: '(RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE)))', type: trans}
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD NON US BACKSLASH AND PIPE))
   - '!'
@@ -105,9 +105,9 @@ layers:
   - Sft+AGr+ 8
   - AGr+Sft+ 9
   - '|'
-  - LEFT ALT
-  - {t: LALT, type: trans}
-  - BACK SPACE
+  - RIGHT ALT
+  - {t: Alt+ LEFT META, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS))', type: held}
@@ -158,16 +158,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: '&msc SCRL_DOWN', type: trans}
+  - {t: '&msc SCRL_UP', type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: Alt+ LEFT META, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Sft+Gui+ 5
+  - {t: Sft+Gui+ 5, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -221,7 +221,7 @@ layers:
   - '&lt 6 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK))'
   - {t: RIGHT SHIFT, h: DELETE}
   - {t: TAB, h: GAME-NUM}
-  - SPACE
+  - {t: SPACE, type: held}
   - {t: LEFT GUI, h: GAME-NAV}
   - {t: ENTER, h: GAME-NUM}
   - BACK SPACE
@@ -278,7 +278,7 @@ layers:
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD PERIOD AND GREATER THAN))
   - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD NON US BACKSLASH AND PIPE)))
   - {type: held}
-  - BACK SPACE
+  - {t: BACK SPACE, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS))
@@ -335,7 +335,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: ▽, type: held}
   - {type: held}
   - {t: ▽, type: trans}
   - PRINT SCREEN
