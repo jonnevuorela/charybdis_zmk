@@ -91,15 +91,16 @@ cleanup_on_exit() {
         mv "$WEST_YML_BACKUP" "$WEST_YML"
     fi
     
-    # Clean up workspace directories
+# Clean up workspace directories (including west-managed external modules)
     log_info "Cleaning up workspace..."
-    rm -rf zmk modules zephyr bootloader tools .west 2>/dev/null
+    rm -rf zmk modules zephyr bootloader tools .west zmk-pmw3610-driver zmk-split-peripheral-input-relay zmk-input-behavior-listener 2>/dev/null
     
     # If directories still exist (permission issues from Docker), use Docker to clean
-    if [ -d ".west" ] || [ -d "zmk" ] || [ -d "modules" ] || [ -d "zephyr" ] || [ -d "bootloader" ] || [ -d "tools" ]; then
+    if [ -d ".west" ] || [ -d "zmk" ] || [ -d "modules" ] || [ -d "zephyr" ] || [ -d "bootloader" ] || [ -d "tools" ] || [ -d "zmk-pmw3610-driver" ] || [ -d "zmk-split-peripheral-input-relay" ] || [ -d "zmk-input-behavior-listener" ]; then
+        log_info "Using Docker to clean workspace (files created by Docker)..."
         docker run --rm -v "$SCRIPT_DIR:/workspace" -w /workspace \
             "$DOCKER_IMAGE" \
-            sh -c "rm -rf zmk modules zephyr bootloader tools .west" 2>/dev/null || true
+            sh -c "rm -rf zmk modules zephyr bootloader tools .west zmk-pmw3610-driver zmk-split-peripheral-input-relay zmk-input-behavior-listener" 2>/dev/null || true
     fi
     
     if [ $exit_code -eq 0 ]; then
@@ -422,17 +423,36 @@ EOF
 cleanup_workspace() {
     log_info "Cleaning workspace before build..."
     
-    # Check if workspace directories exist and have files
-    if [ -d ".west" ] || [ -d "zmk" ] || [ -d "modules" ] || [ -d "zephyr" ] || [ -d "bootloader" ] || [ -d "tools" ]; then
+    # List of directories to clean (including west-managed external modules)
+    local dirs="zmk modules zephyr bootloader tools .west zmk-pmw3610-driver zmk-split-peripheral-input-relay zmk-input-behavior-listener"
+    
+    # Check if any workspace directories exist
+    local needs_cleanup=false
+    for dir in $dirs; do
+        if [ -d "$dir" ]; then
+            needs_cleanup=true
+            break
+        fi
+    done
+    
+    if [ "$needs_cleanup" = true ]; then
         # Try to remove normally first
-        rm -rf zmk modules zephyr bootloader tools .west 2>/dev/null || true
+        rm -rf $dirs 2>/dev/null || true
         
         # If directories still exist (permission issues from Docker), use Docker to clean
-        if [ -d ".west" ] || [ -d "zmk" ] || [ -d "modules" ] || [ -d "zephyr" ] || [ -d "bootloader" ] || [ -d "tools" ]; then
+        local still_exists=false
+        for dir in $dirs; do
+            if [ -d "$dir" ]; then
+                still_exists=true
+                break
+            fi
+        done
+        
+        if [ "$still_exists" = true ]; then
             log_info "Using Docker to clean workspace (files created by Docker)..."
             docker run --rm -v "$SCRIPT_DIR:/workspace" -w /workspace \
                 "$DOCKER_IMAGE" \
-                sh -c "rm -rf zmk modules zephyr bootloader tools .west" 2>/dev/null || true
+                sh -c "rm -rf $dirs" 2>/dev/null || true
         fi
     fi
     
