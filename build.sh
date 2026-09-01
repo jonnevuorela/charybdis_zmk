@@ -24,6 +24,12 @@ BUILD_YAML="build.yaml"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 
+# PMW3610 driver template files
+PMW3610_DTSI="boards/shields/charybdis-bt/charybdis_pmw3610.dtsi"
+PMW3610_DTSI_BACKUP="${PMW3610_DTSI}.backup"
+CHARYBDIS_RIGHT_CONF="boards/shields/charybdis-bt/charybdis_right.conf"
+CHARYBDIS_RIGHT_CONF_BACKUP="${CHARYBDIS_RIGHT_CONF}.backup"
+
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -91,7 +97,18 @@ cleanup_on_exit() {
         mv "$WEST_YML_BACKUP" "$WEST_YML"
     fi
     
-# Clean up workspace directories (including west-managed external modules)
+    # Restore original PMW3610 config files
+    if [ -f "$PMW3610_DTSI_BACKUP" ]; then
+        log_info "Restoring original PMW3610 device tree..."
+        mv "$PMW3610_DTSI_BACKUP" "$PMW3610_DTSI"
+    fi
+    
+    if [ -f "$CHARYBDIS_RIGHT_CONF_BACKUP" ]; then
+        log_info "Restoring original right shield config..."
+        mv "$CHARYBDIS_RIGHT_CONF_BACKUP" "$CHARYBDIS_RIGHT_CONF"
+    fi
+    
+    # Clean up workspace directories (including west-managed external modules)
     log_info "Cleaning up workspace..."
     rm -rf zmk modules zephyr bootloader tools .west zmk-pmw3610-driver zmk-split-peripheral-input-relay zmk-input-behavior-listener 2>/dev/null
     
@@ -328,6 +345,12 @@ backup_west_yml() {
     cp "$WEST_YML" "$WEST_YML_BACKUP"
 }
 
+backup_driver_configs() {
+    log_info "Backing up PMW3610 config files..."
+    cp "$PMW3610_DTSI" "$PMW3610_DTSI_BACKUP"
+    cp "$CHARYBDIS_RIGHT_CONF" "$CHARYBDIS_RIGHT_CONF_BACKUP"
+}
+
 update_driver_in_west_yml() {
     if [ "$SELECTED_DRIVER" = "inorichi" ]; then
         log_info "Updating west.yml to use inorichi driver..."
@@ -365,6 +388,28 @@ print("Updated west.yml to use inorichi driver")
 EOF
         
         log_success "Driver updated in west.yml"
+    fi
+}
+
+apply_driver_config_templates() {
+    log_info "Applying ${SELECTED_DRIVER} driver configuration templates..."
+    
+    # Apply PMW3610 device tree template
+    if [ -f "${PMW3610_DTSI}.${SELECTED_DRIVER}" ]; then
+        cp "${PMW3610_DTSI}.${SELECTED_DRIVER}" "$PMW3610_DTSI"
+        log_success "Applied ${SELECTED_DRIVER} device tree template"
+    else
+        log_error "Template not found: ${PMW3610_DTSI}.${SELECTED_DRIVER}"
+        exit 1
+    fi
+    
+    # Apply right shield config template
+    if [ -f "${CHARYBDIS_RIGHT_CONF}.${SELECTED_DRIVER}" ]; then
+        cp "${CHARYBDIS_RIGHT_CONF}.${SELECTED_DRIVER}" "$CHARYBDIS_RIGHT_CONF"
+        log_success "Applied ${SELECTED_DRIVER} shield config template"
+    else
+        log_error "Template not found: ${CHARYBDIS_RIGHT_CONF}.${SELECTED_DRIVER}"
+        exit 1
     fi
 }
 
@@ -737,8 +782,14 @@ main() {
     # Backup west.yml
     backup_west_yml
     
+    # Backup driver config files
+    backup_driver_configs
+    
     # Update driver if needed
     update_driver_in_west_yml
+    
+    # Apply driver config templates
+    apply_driver_config_templates
     
     # Convert keymaps
     convert_keymaps
