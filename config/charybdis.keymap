@@ -35,19 +35,19 @@
 
         to-LINUX {
             bindings = <&to 0>;
-            key-positions = <50 51>;
+            key-positions = <23 35>;
             layers = <3 7>;
         };
 
         to-GAME {
             bindings = <&to 3>;
-            key-positions = <47 36>;
+            key-positions = <47 11>;
             layers = <0 7>;
         };
 
         to-FN {
             bindings = <&to 7>;
-            key-positions = <41 42>;
+            key-positions = <42 41>;
             layers = <0 3>;
         };
 
@@ -159,7 +159,7 @@
 &kp ESC  &kp F1        &kp F2        &kp F3             &kp F4            &kp F5          &kp F6          &kp F7                &kp F8        &kp F9           &kp F10       &kp F11
 &trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4      &kp NUMBER_5    &kp NUMBER_6    &kp NUMBER_7          &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0  &trans
 &trans   &trans        &trans        &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT      &kp LEFT_ARROW  &kp DOWN_ARROW        &kp UP_ARROW  &kp RIGHT_ARROW  &trans        &trans
-&trans   &trans        &trans        &trans             &trans            &trans          &trans          &msc SCRL_DOWN        &msc SCRL_UP  &trans           &trans        &trans
+&trans   &trans        &trans        &trans             &kp HOME          &kp INSERT      &trans          &msc SCRL_DOWN        &msc SCRL_UP  &trans           &trans        &trans
                                      &kp LA(LEFT_META)  &trans            &trans          &trans          &kp LS(LG(NUMBER_5))
                                                         &trans            &trans          &trans
             >;
