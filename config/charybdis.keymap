@@ -146,10 +146,10 @@
             bindings = <
 &trans            &kp LS(RA(NUMBER_1))  &kp LS(RA(NUMBER_2))      &kp LS(RA(NUMBER_3))      &kp LS(RA(NUMBER_4))            &kp LS(RA(NUMBER_5))    &kp LS(RA(NUMBER_6))  &kp LS(RA(NUMBER_7))  &kp LS(RA(NUMBER_8))     &kp LS(RA(NUMBER_9))      &kp LS(RA(NUMBER_0))  &kp DE_ACUTE
 &kp DE_LESS_THAN  &kp EXCLAMATION       &kp AT                    &kp HASH                  &kp DLLR                        &kp PERCENT             &kp CARET             &kp AMPERSAND         &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_ASTERISK       &kp TILDE
-&kp GRAVE         &hml LEFT_CONTROL N1  &hml LEFT_ALT DE_SECTION  &hml LEFT_GUI DE_EQUAL    &hml LEFT_SHIFT LS(DE_SECTION)  &kp LA(N)               &kp MINUS             &kp EQUAL             &kp RA(N8)               &kp RA(N9)                &kp BACKSLASH         &kp LESS_THAN
-&kp LEFT_SHIFT    &trans                &trans                    &hml LA(DE_N8) LA(DE_N5)  &hml LA(DE_N9) LA(DE_N6)        &kp DE_UMLAUT           &kp UNDER             &kp PLUS              &kp RS(RA(NUMBER_8))     &kp RA(RS(N9))            &kp PIPE              &kp RIGHT_ALT
-                                                                  &kp LA(LEFT_META)         &trans                          &trans                  &trans                &kp DE_N0
-                                                                                            &trans                          &trans                  &kp LEFT_ALT
+&kp GRAVE         &hml LEFT_CONTROL N1  &hml LEFT_ALT DE_SECTION  &hml LEFT_GUI DE_EQUAL    &hml LEFT_SHIFT LS(DE_SECTION)  &kp LA(N)               &kp MINUS             &kp EQUAL             &kp RA(N8)               &kp RA(N9)                &kp BACKSLASH         &kp DE_LESS_THAN
+&kp LEFT_SHIFT    &trans                &trans                    &hml LA(DE_N8) LA(DE_N5)  &hml LA(DE_N9) LA(DE_N6)        &kp DE_UMLAUT           &kp UNDER             &kp PLUS              &kp RS(RA(N7))           &kp RA(RS(N0))            &kp DE_PIPE           &kp RIGHT_ALT
+                                                                  &kp LA(LEFT_META)         &trans                          &trans                  &kp LEFT_ALT          &kp DE_N0
+                                                                                            &trans                          &trans                  &kp RIGHT_ALT
             >;
         };
 
