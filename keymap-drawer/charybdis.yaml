@@ -93,7 +93,7 @@ layers:
   - AGr+ 8
   - AGr+ 9
   - \
-  - <
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD NON US BACKSLASH AND PIPE))
   - LEFT SHIFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -102,18 +102,18 @@ layers:
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD RIGHT BRACKET AND RIGHT BRACE))
   - _
   - +
-  - Sft+AGr+ 8
-  - AGr+Sft+ 9
-  - '|'
+  - AGr+ 7
+  - AGr+ 0
+  - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 7 AND AMPERSAND)))
   - RIGHT ALT
   - {t: Alt+ LEFT META, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: LEFT ALT, type: trans}
   - {t: '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS))', type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: LEFT ALT, type: trans}
+  - {t: RIGHT ALT, type: trans}
   LINUX-NAV:
   - {t: ESC, type: trans}
   - {t: F1, type: trans}
