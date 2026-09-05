@@ -50,10 +50,10 @@ layers:
   - {t: /, h: SCROLL}
   - BACK SPACE
   - LEFT META
-  - GAME
+  - LINUX-NAV
   - SPACE
   - RETURN
-  - LINUX-NAV
+  - LINUX-NUM
   - '&mkp MB1'
   - '&mkp MB2'
   - RIGHT ALT
@@ -155,8 +155,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: HOME, type: trans}
+  - {t: INSERT, type: trans}
   - {t: ▽, type: trans}
   - {t: '&msc SCRL_DOWN', type: trans}
   - {t: '&msc SCRL_UP', type: trans}
@@ -164,7 +164,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: Alt+ LEFT META, type: trans}
-  - {t: ▽, type: trans}
+  - {t: ▽, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: Sft+Gui+ 5, type: held}
@@ -172,8 +172,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   GAME:
-  - ESCAPE
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD GRAVE ACCENT AND TILDE))
+  - '5'
+  - ESC
   - '1'
   - '2'
   - '3'
@@ -183,19 +183,19 @@ layers:
   - '8'
   - '9'
   - '0'
-  - ((ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE)))
+  - ']'
   - T
   - TAB
   - Q
   - W
   - E
   - {t: R, h: T}
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD Y))
+  - Y
   - U
   - I
   - O
   - P
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD LEFT BRACKET AND LEFT BRACE))
+  - '['
   - G
   - LEFT SHIFT
   - A
@@ -206,27 +206,27 @@ layers:
   - {t: J, h: RIGHT SHIFT}
   - {t: K, h: RIGHT GUI}
   - {t: L, h: RIGHT ALT}
-  - '&hmr RIGHT_CONTROL (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))'
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD APOSTROPHE AND QUOTE))
+  - ;
+  - ''''
   - B
-  - '&hml LEFT_CONTROL (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))'
-  - {t: Y, h: LEFT ALT}
+  - LEFT CONTROL
+  - {t: Z, h: LEFT ALT}
   - {t: X, h: LEFT GUI}
   - {t: C, h: LEFT SHIFT}
   - {t: V, h: B}
   - N
   - {t: M, h: RIGHT SHIFT}
-  - '&hmr RIGHT_GUI (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))'
-  - '&hmr RIGHT_ALT (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN))'
-  - '&lt 6 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK))'
-  - {t: RIGHT SHIFT, h: DELETE}
+  - ','
+  - .
+  - /
+  - {t: DELETE, h: DELETE}
   - {t: TAB, h: GAME-NUM}
-  - {t: SPACE, type: held}
-  - {t: LEFT GUI, h: GAME-NAV}
-  - {t: ENTER, h: GAME-NUM}
-  - BACK SPACE
-  - '&mkp RCLK'
-  - '&mkp LCLK'
+  - {t: LEFT CONTROL, type: held}
+  - {t: SPACE, h: GAME-NAV}
+  - {t: RETURN, h: GAME-NUM}
+  - GAME-NUM
+  - LEFT ALT
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD GRAVE ACCENT AND TILDE))
   - GAME-NAV
   GAME-NUM:
   - {t: ▽, type: trans}
@@ -277,11 +277,11 @@ layers:
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 3 AND HASH))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD PERIOD AND GREATER THAN))
   - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD NON US BACKSLASH AND PIPE)))
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: BACK SPACE, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS))
+  - {t: '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS))', type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -335,13 +335,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: held}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PRINT SCREEN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: ▽, type: held}
   SCROLL:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -389,7 +389,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RIGHT SHIFT
-  - {t: ▽, type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -457,13 +457,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [50, 51]
+- p: [23, 35]
   k: {t: LINUX, h: toggle}
   l: [GAME, FN]
-- p: [47, 36]
+- p: [47, 11]
   k: {t: GAME, h: toggle}
   l: [LINUX, FN]
-- p: [41, 42]
+- p: [42, 41]
   k: {t: FN, h: toggle}
   l: [LINUX, GAME]
 - p: [31, 28]

@@ -802,7 +802,16 @@ main() {
     
     # Show summary
     show_summary
-    
+
+    # Update keymap-drawer SVG
+    if command -v keymap &> /dev/null; then
+        log_step "Updating Keymap Drawer"
+        bash "${SCRIPT_DIR}/scripts/update_keymap_drawer.sh"
+    else
+        log_warning "keymap-drawer not installed, skipping SVG update"
+        log_info "Install with: pip install keymap-drawer"
+    fi
+
     log_success "Build process complete!"
 }
 
